@@ -1,7 +1,7 @@
 package guru.springframework.joke.controllers;
 
-import guru.springframework.joke.services.ChuckNorrisService;
-import guru.springframework.joke.services.ChuckNorrisServiceImpl;
+import guru.springframework.joke.services.JokeService;
+import guru.springframework.joke.services.JokeServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ public class JokesController {
 
     @RequestMapping("/")
     public String getJoke(Model model) {
-        ChuckNorrisService service = new ChuckNorrisServiceImpl();
+        JokeService service = new JokeServiceImpl();
         model.addAttribute("joke", service.getRandomQuote());
         return "chucknorris";
     }

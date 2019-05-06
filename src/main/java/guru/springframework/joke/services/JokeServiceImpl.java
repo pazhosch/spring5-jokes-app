@@ -4,10 +4,10 @@ import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ChuckNorrisServiceImpl implements ChuckNorrisService {
+public class JokeServiceImpl implements JokeService {
     private final ChuckNorrisQuotes quotes;
 
-    private ChuckNorrisServiceImpl() {
+    private JokeServiceImpl() {
         quotes = new ChuckNorrisQuotes();
     }
 
