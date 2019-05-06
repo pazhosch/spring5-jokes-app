@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class JokeServiceImpl implements JokeService {
     private final ChuckNorrisQuotes quotes;
 
-    private JokeServiceImpl() {
+    public JokeServiceImpl() {
         quotes = new ChuckNorrisQuotes();
     }
 

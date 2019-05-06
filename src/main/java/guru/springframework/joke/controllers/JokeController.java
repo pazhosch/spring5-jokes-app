@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class JokesController {
+public class JokeController {
 
     @RequestMapping("/")
     public String getJoke(Model model) {
