@@ -5,7 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ChuckNorrisServiceImpl implements ChuckNorrisService {
-    private ChuckNorrisQuotes quotes = new ChuckNorrisQuotes();
+    private final ChuckNorrisQuotes quotes;
+
+    private ChuckNorrisServiceImpl() {
+        quotes = new ChuckNorrisQuotes();
+    }
 
     @Override
     public String getRandomQuote() {
